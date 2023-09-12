@@ -4,3 +4,4 @@ function paint(color) {
     circle.style = `background-color:${color}`;
     console.log(circle);
 }
+console.log('Script Loaded...');

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Favorite Things</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="Homework01">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css'
+        integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=='
+        crossorigin='anonymous' />
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <nav class="navbar" id="myNavBar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Favorite Things</a>
+        </div>
+    </nav>
+
+    <div id="mainPage" class="container page-container">
+        <hr>
+        <h2>Favorite Number:</h2>
+        <div id="textBox">0</div>
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-2 col-4">
+                    <button id="decrementButton" type="button" class="btn">-1</button>
+                </div>
+                <div class="col-md-2 col-4">
+                    <button id="resetButton" type="button" class="btn">RESET</button>
+                </div>
+                <div class="col-md-2 col-4">
+                    <button id="incrementButton" type="button" class="btn">+1</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h2>Favorite Color:</h2>
+        <div class="container" id="favoriteColorContainer">
+            <div class="container" id="favoriteColorBox">--SELECT COLOR--</div>
+        </div>
+        <div class="button-container">
+            <div class="row g-0 justify-content-center">
+                <div class="colorCols col-3 col-md-2">
+                    <button id="blueButton" class="btn">Blue</button>
+                </div>
+                <div class="colorCols col-3 col-md-2">
+                    <button id="greenButton" class="btn">Green</button>
+                </div>
+                <div class="colorCols col-3 col-md-2">
+                    <button id="redButton" class="btn">Red</button>
+                </div>
+                <div class="colorCols col-3 col-md-2">
+                    <button id="purpleButton" class="btn">Purple</button>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+    </div>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js'
+        integrity='sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=='
+        crossorigin='anonymous'></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

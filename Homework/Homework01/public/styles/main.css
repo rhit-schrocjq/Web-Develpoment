@@ -1,0 +1,67 @@
+body {
+    background: lightgrey;
+}
+
+#myNavBar {
+    background-color: #800000;
+}
+
+#myNavBar a {
+    color : white;
+}
+
+hr {
+    border-top: 2px solid grey;
+}
+
+.btn {
+    color: white;
+    background-color: #800000;
+    width : 100%;
+}
+
+.page-container {
+    margin-top: 20px;
+}
+
+#textBox {
+    font-size: 3em;
+    text-align: center;
+}
+
+.colorCols{
+    padding : 2px;
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+#favoriteColorContainer {
+    margin : none;
+    padding : 20px;
+}
+
+#favoriteColorBox {
+    margin: none;
+    width: 200px;
+    height: 100px;
+    background-color: #800000;
+    text-align: center;
+    color: white;
+    line-height: 100px;
+}
+
+#blueButton {
+    background-color: blue;
+}
+
+#greenButton {
+    background-color: green;
+}
+
+#redButton {
+    background-color: red;
+}
+
+#purpleButton {
+    background-color: purple;
+}

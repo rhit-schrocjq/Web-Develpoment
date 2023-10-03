@@ -1,0 +1,22 @@
+{
+  "hosting": [
+    {
+    "target": "01",
+    "public": "FollowAlong05/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  {
+    "target": "02",
+    "public": "FollowAlong06/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+]
+}

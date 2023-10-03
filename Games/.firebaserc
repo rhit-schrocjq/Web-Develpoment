@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "tictactoe01-schrocjq"
+  },
+  "targets": {
+    "tictactoe01-schrocjq": {
+      "hosting": {
+        "01": [
+          "tictactoe01-schrocjq"
+        ],
+        "02": [
+          "tictactoe02-schrocjq"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

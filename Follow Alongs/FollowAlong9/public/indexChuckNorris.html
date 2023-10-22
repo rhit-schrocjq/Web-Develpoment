@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Symbols+Outlined">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css'
+        integrity='sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css'
+        integrity='sha512-AZtJoEn5SfSZimv10x5NMO2gaZCdoU8nxtHJK8O4SbKNlQeb1ggkvf0b0QixuuXIjX3Tp5jzBbTWajki81Vl2g=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet' href="styles/main.css">
+    <link rel='stylesheet' href="styles/mainChuckNorris.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Follow Along API - Modal</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">API</a>
+        </div>
+    </nav>
+
+    <div id="mainPage" class="container page-container">
+
+        <div class="modal" id="dataIndexModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Enter Data Index</h5>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownButton">
+                                Select Category
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" onclick="setChoice('animal')">Animal</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('career')">Career</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('celebrity')">Celebrity</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('dev')">Dev</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('explicit')">Explicit</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('fasion')">Fashion</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('food')">Food</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('history')">History</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('money')">Money</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('movie')">Movie</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('music')">Music</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('political')">Political</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('religion')">Religion</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('science')">Science</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('sport')">Sport</a></li>
+                                <li><a class="dropdown-item" onclick="setChoice('travel')">Travel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="fetchDataButton">Fetch Data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Chuck Norris Jokes</h1>
+
+    <button id="fab" type="button" class="btn btn-primary pmd-btn-fab pmd-btn-raised" data-bs-toggle="modal"
+    data-bs-target="#dataIndexModal">
+    <i class="material-symbols-outlined">
+        add
+    </i>
+    </button>
+
+    <table class="table mt-4" id="dataTable">
+        <thead>
+            <tr>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'
+    integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=='
+    crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js'
+    integrity='sha512-ToL6UYWePxjhDQKNioSi4AyJ5KkRxY+F1+Fi7Jgh0Hp5Kk2/s8FD7zusJDdonfe5B00Qw+B8taXxF6CFLnqNCw=='
+    crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js'
+    integrity='sha512-rXm6RiYDlz+aZC/ht75tGzeAmCg4gVfBA6Be5s5uENSahiXkgwEy10J2Cc+dxUAW4lRRQYbS5pugMOqBrs8ksw=='
+    crossorigin='anonymous'></script>
+<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js' integrity='sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g==' crossorigin='anonymous'></script>-->
+<script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
+<!-- <script defer src="/__/firebase/10.4.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-database-compat.js"></script>-->
+<script defer src="/__/firebase/10.4.0/firebase-firestore-compat.js"></script>
+<!--<script defer src="/__/firebase/10.4.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.4.0/firebase-performance-compat.js"></script>-->
+<script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<script src="scripts/mainChuckNorris.js"></script>
+</body>
+
+</html>

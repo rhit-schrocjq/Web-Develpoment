@@ -14,7 +14,7 @@
     crossorigin='anonymous' />
   <link rel='stylesheet' href="styles/main.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <title>Follow Along API</title>
+  <title>Follow Along API - Modal</title>
 </head>
 
 <body>
@@ -25,11 +25,35 @@
   </nav>
 
   <div id="mainPage" class="container page-container">
-    <div class="button-group">
-      <button id="fetchData" type="button" class="btn btn-primary">Fetch Data</button>
+    <button id="fab" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dataIndexModal">
+        <i class="material-symbols-outlined">
+            add
+        </i>
+    </button>
+
+    <div class="modal" id="dataIndexModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Enter Data Index</h5>
+              
+            </div>
+            <div class="modal-body">
+              <input type="number" id="dataIndexInput" class="form-control" placeholder="Enter a number">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="fetchDataButton">Fetch Data</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="dataContainer"></div>
-  </div>
+
+    <div id="dataDisplay" class="mt-5 ml-5"></div>
+
+    </body>
+      
 
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous'></script>
@@ -51,7 +75,7 @@
     <script defer src="/__/firebase/10.4.0/firebase-remote-config-compat.js"></script>
     <script defer src="/__/firebase/10.4.0/firebase-performance-compat.js"></script>-->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/mainModal.js"></script>
 </body>
 
 </html>

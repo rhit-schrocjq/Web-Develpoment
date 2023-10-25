@@ -1,0 +1,14 @@
+<body>
+    <h1>JS Array</h1>
+    <h2>filter() method</h2>
+    <p>Get every element that is greater than 18</p>
+    <p id="demo"></p>
+    <script>
+        const age = [13,20,30,40,10];
+        function checkAge (age) {
+            return age > 18
+        }
+        document.getElementById("demo").innerHTML = 
+            age.filter(checkAge);
+    </script>
+</body>
